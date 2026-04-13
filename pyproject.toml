@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "budget-planner-ai-mcp"
+version = "0.1.0"
+description = "Plan personal budgets using popular rules like 50/30/20 and track category allocations."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "pydantic>=2.0",
+]
+
+[project.scripts]
+budget_planner_ai_mcp = "budget_planner_ai_mcp.server:main"
