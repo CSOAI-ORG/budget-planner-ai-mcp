@@ -1,0 +1,20 @@
+{
+  "name": "budget-planner-ai-mcp",
+  "description": "MEOK AI Labs \u2014 Budget Planner tools for AI agents and LLMs",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/budget-planner-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "create_budget"
+  ],
+  "categories": [
+    "Finance",
+    "Planning"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}

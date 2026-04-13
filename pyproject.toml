@@ -4,15 +4,26 @@ build-backend = "hatchling.build"
 
 [project]
 name = "budget-planner-ai-mcp"
-version = "0.1.0"
-description = "Plan personal budgets using popular rules like 50/30/20 and track category allocations."
+version = "1.0.0"
+description = "MEOK AI Labs — Budget Planner tools for AI agents and LLMs"
+authors = [{name="MEOK AI Labs", email="nicholas@meok.ai"}]
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.10"
+keywords = ["mcp", "mcp-server", "model-context-protocol", "claude", "ai-tools", "meok-ai-labs", "budget-planning", "financial-planning", "expense-management", "budgeting"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Developers",
+]
 dependencies = [
     "mcp>=1.0.0",
-    "pydantic>=2.0",
 ]
 
-[project.scripts]
-budget_planner_ai_mcp = "budget_planner_ai_mcp.server:main"
+[project.urls]
+Homepage = "https://meok.ai"
+Repository = "https://github.com/CSOAI-ORG/budget-planner-ai-mcp"
+Documentation = "https://meok.ai/docs/budget-planner-ai-mcp"
+"Bug Tracker" = "https://github.com/CSOAI-ORG/budget-planner-ai-mcp/issues"

@@ -1,0 +1,10 @@
+name: budget-planner-ai-mcp
+description: "MEOK AI Labs — Budget Planner tools for AI agents and LLMs"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/budget-planner-ai-mcp
+license: MIT
+categories: [Finance, Planning]
+tags: [budget-planning, financial-planning, expense-management, budgeting]
+runtime: python
+entrypoint: server.py
