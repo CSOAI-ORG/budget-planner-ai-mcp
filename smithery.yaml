@@ -1,4 +1,43 @@
 name: budget-planner-ai-mcp
 description: MEOK AI Labs MCP Server
 version: 1.0.0
-tools: []
+tools:
+- name: create_budget
+  description: Create a monthly budget with category allocations
+  parameters: []
+- name: add_expense
+  description: Record an expense transaction
+  parameters: []
+- name: add_income
+  description: Record income for a budget period
+  parameters: []
+- name: get_budget_status
+  description: Get budget status for a month
+  parameters: []
+- name: get_transactions
+  description: List transactions with optional filters
+  parameters: []
+- name: create_goal
+  description: Create a savings goal
+  parameters: []
+- name: update_goal_progress
+  description: Add contribution to a savings goal
+  parameters: []
+- name: get_goals
+  description: Get all savings goals with progress
+  parameters: []
+- name: get_analytics
+  description: Get spending analytics
+  parameters: []
+- name: set_budget_alert
+  description: Set spending alert threshold for a category
+  parameters: []
+- name: get_category_spending
+  description: Get detailed spending by category
+  parameters: []
+- name: transfer_funds
+  description: Transfer between budget categories
+  parameters: []
+- name: rollover_unused
+  description: Rollover unused budget to next month
+  parameters: []
