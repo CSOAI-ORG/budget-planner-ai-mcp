@@ -22,3 +22,6 @@ Repository = "https://github.com/CSOAI-ORG/budget-planner-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 only-include = ["server.py"]
+
+[project.scripts]
+budget_planner_ai_mcp = "server:main"
