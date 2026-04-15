@@ -1,43 +1,157 @@
 name: budget-planner-ai-mcp
-description: MEOK AI Labs MCP Server
+description: Comprehensive budget planning with tracking, goals, and analytics.
 version: 1.0.0
 tools:
 - name: create_budget
   description: Create a monthly budget with category allocations
-  parameters: []
+  parameters:
+  - name: month
+    type: string
+    required: true
+  - name: income
+    type: number
+    required: true
+  - name: categories
+    type: object
+    required: true
 - name: add_expense
   description: Record an expense transaction
-  parameters: []
+  parameters:
+  - name: budget_month
+    type: string
+    required: true
+  - name: category
+    type: string
+    required: true
+  - name: amount
+    type: number
+    required: true
+  - name: description
+    type: string
+    required: false
+  - name: date
+    type: string
+    required: false
 - name: add_income
   description: Record income for a budget period
-  parameters: []
+  parameters:
+  - name: budget_month
+    type: string
+    required: true
+  - name: source
+    type: string
+    required: true
+  - name: amount
+    type: number
+    required: true
+  - name: date
+    type: string
+    required: false
 - name: get_budget_status
   description: Get budget status for a month
-  parameters: []
+  parameters:
+  - name: month
+    type: string
+    required: true
 - name: get_transactions
   description: List transactions with optional filters
-  parameters: []
+  parameters:
+  - name: budget_month
+    type: string
+    required: false
+  - name: category
+    type: string
+    required: false
+  - name: start_date
+    type: string
+    required: false
+  - name: end_date
+    type: string
+    required: false
+  - name: limit
+    type: integer
+    required: false
 - name: create_goal
   description: Create a savings goal
-  parameters: []
+  parameters:
+  - name: name
+    type: string
+    required: true
+  - name: target_amount
+    type: number
+    required: true
+  - name: target_date
+    type: string
+    required: true
+  - name: category
+    type: string
+    required: false
 - name: update_goal_progress
   description: Add contribution to a savings goal
-  parameters: []
+  parameters:
+  - name: goal_id
+    type: string
+    required: true
+  - name: amount
+    type: number
+    required: true
 - name: get_goals
   description: Get all savings goals with progress
-  parameters: []
+  parameters:
+  - name: status
+    type: string
+    required: false
 - name: get_analytics
   description: Get spending analytics
-  parameters: []
+  parameters:
+  - name: month
+    type: string
+    required: false
+  - name: category
+    type: string
+    required: false
 - name: set_budget_alert
   description: Set spending alert threshold for a category
-  parameters: []
+  parameters:
+  - name: month
+    type: string
+    required: true
+  - name: category
+    type: string
+    required: true
+  - name: threshold_percent
+    type: number
+    required: true
 - name: get_category_spending
   description: Get detailed spending by category
-  parameters: []
+  parameters:
+  - name: month
+    type: string
+    required: false
+  - name: category
+    type: string
+    required: false
 - name: transfer_funds
   description: Transfer between budget categories
-  parameters: []
+  parameters:
+  - name: month
+    type: string
+    required: true
+  - name: from_category
+    type: string
+    required: true
+  - name: to_category
+    type: string
+    required: true
+  - name: amount
+    type: number
+    required: true
 - name: rollover_unused
   description: Rollover unused budget to next month
-  parameters: []
+  parameters:
+  - name: source_month
+    type: string
+    required: true
+  - name: target_month
+    type: string
+    required: true

@@ -1,6 +1,6 @@
 {
   "name": "budget-planner-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Comprehensive budget planning with tracking, goals, and analytics.",
   "version": "1.0.0",
   "tools": [
     {
@@ -8,8 +8,22 @@
       "description": "Create a monthly budget with category allocations",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "month": {
+            "type": "string"
+          },
+          "income": {
+            "type": "number"
+          },
+          "categories": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "month",
+          "income",
+          "categories"
+        ]
       }
     },
     {
@@ -17,8 +31,28 @@
       "description": "Record an expense transaction",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "budget_month": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "description": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "budget_month",
+          "category",
+          "amount"
+        ]
       }
     },
     {
@@ -26,8 +60,25 @@
       "description": "Record income for a budget period",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "budget_month": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "date": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "budget_month",
+          "source",
+          "amount"
+        ]
       }
     },
     {
@@ -35,8 +86,14 @@
       "description": "Get budget status for a month",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "month": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "month"
+        ]
       }
     },
     {
@@ -44,7 +101,23 @@
       "description": "List transactions with optional filters",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "budget_month": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "start_date": {
+            "type": "string"
+          },
+          "end_date": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
         "required": []
       }
     },
@@ -53,8 +126,25 @@
       "description": "Create a savings goal",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "target_amount": {
+            "type": "number"
+          },
+          "target_date": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "target_amount",
+          "target_date"
+        ]
       }
     },
     {
@@ -62,8 +152,18 @@
       "description": "Add contribution to a savings goal",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "goal_id": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "goal_id",
+          "amount"
+        ]
       }
     },
     {
@@ -71,7 +171,11 @@
       "description": "Get all savings goals with progress",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "status": {
+            "type": "string"
+          }
+        },
         "required": []
       }
     },
@@ -80,7 +184,14 @@
       "description": "Get spending analytics",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "month": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          }
+        },
         "required": []
       }
     },
@@ -89,8 +200,22 @@
       "description": "Set spending alert threshold for a category",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "month": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "threshold_percent": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "month",
+          "category",
+          "threshold_percent"
+        ]
       }
     },
     {
@@ -98,7 +223,14 @@
       "description": "Get detailed spending by category",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "month": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          }
+        },
         "required": []
       }
     },
@@ -107,8 +239,26 @@
       "description": "Transfer between budget categories",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "month": {
+            "type": "string"
+          },
+          "from_category": {
+            "type": "string"
+          },
+          "to_category": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "month",
+          "from_category",
+          "to_category",
+          "amount"
+        ]
       }
     },
     {
@@ -116,8 +266,18 @@
       "description": "Rollover unused budget to next month",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "source_month": {
+            "type": "string"
+          },
+          "target_month": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "source_month",
+          "target_month"
+        ]
       }
     }
   ]
