@@ -1,0 +1,90 @@
+{
+  "name": "budget-planner-ai",
+  "description": "Comprehensive budget planning with tracking, goals, and analytics.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/budget-planner-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "create_budget",
+      "description": "Create a monthly budget with category allocations"
+    },
+    {
+      "name": "add_expense",
+      "description": "Record an expense transaction"
+    },
+    {
+      "name": "add_income",
+      "description": "Record income for a budget period"
+    },
+    {
+      "name": "get_budget_status",
+      "description": "Get budget status for a month"
+    },
+    {
+      "name": "get_transactions",
+      "description": "List transactions with optional filters"
+    },
+    {
+      "name": "create_goal",
+      "description": "Create a savings goal"
+    },
+    {
+      "name": "update_goal_progress",
+      "description": "Add contribution to a savings goal"
+    },
+    {
+      "name": "get_goals",
+      "description": "Get all savings goals with progress"
+    },
+    {
+      "name": "get_analytics",
+      "description": "Get spending analytics"
+    },
+    {
+      "name": "set_budget_alert",
+      "description": "Set spending alert threshold for a category"
+    },
+    {
+      "name": "get_category_spending",
+      "description": "Get detailed spending by category"
+    },
+    {
+      "name": "transfer_funds",
+      "description": "Transfer between budget categories"
+    },
+    {
+      "name": "rollover_unused",
+      "description": "Rollover unused budget to next month"
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Data & Analytics",
+    "Finance & Fintech"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
