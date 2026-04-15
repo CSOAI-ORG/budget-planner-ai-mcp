@@ -1,7 +1,7 @@
 {
   "name": "budget-planner-ai-mcp",
   "version": "1.0.0",
-  "description": "MEOK AI Labs — budget planner MCP Server",
+  "description": "AI-powered budget planner ai MCP server for agents. Supports create budget, add expense, add income. By MEOK AI Labs.",
   "main": "server.py",
   "mcp": {
     "name": "budget planner",
@@ -9,10 +9,22 @@
     "homepage": "https://meok.ai",
     "repository": "https://github.com/CSOAI-ORG/budget-planner-ai-mcp",
     "runtime": "python",
-    "tags": ["mcp", "mcp-server", "meok-ai-labs", "ai-tools"]
+    "tags": [
+      "mcp",
+      "mcp-server",
+      "meok-ai-labs",
+      "ai-tools"
+    ]
   },
-  "keywords": ["mcp", "mcp-server", "meok-ai-labs"],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "meok-ai-labs"
+  ],
   "author": "MEOK AI Labs <nicholas@meok.ai>",
   "license": "MIT",
-  "repository": {"type": "git", "url": "https://github.com/CSOAI-ORG/budget-planner-ai-mcp"}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/budget-planner-ai-mcp"
+  }
 }

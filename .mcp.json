@@ -1,6 +1,6 @@
 {
   "name": "budget-planner-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Comprehensive budget planning with tracking, goals, and analytics.",
+  "description": "AI-powered budget planner ai MCP server for agents. Supports create budget, add expense, add income. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
