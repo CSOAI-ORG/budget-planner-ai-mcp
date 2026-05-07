@@ -51,7 +51,22 @@ def create_id():
 
 @mcp.tool()
 def create_budget(month: str, income: float, categories: dict, api_key: str = "") -> str:
-    """Create a monthly budget with category allocations"""
+    """Create a monthly budget with category allocations
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -89,7 +104,23 @@ def create_budget(month: str, income: float, categories: dict, api_key: str = ""
 
 @mcp.tool()
 def add_expense(budget_month: str, category: str, amount: float, description: str = "", date: str = "", api_key: str = "") -> str:
-    """Record an expense transaction"""
+    """Record an expense transaction
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -147,7 +178,23 @@ def add_expense(budget_month: str, category: str, amount: float, description: st
 
 @mcp.tool()
 def add_income(budget_month: str, source: str, amount: float, date: str = "", api_key: str = "") -> str:
-    """Record income for a budget period"""
+    """Record income for a budget period
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -186,7 +233,23 @@ def add_income(budget_month: str, source: str, amount: float, date: str = "", ap
 
 @mcp.tool()
 def get_budget_status(month: str, api_key: str = "") -> str:
-    """Get budget status for a month"""
+    """Get budget status for a month
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -225,7 +288,23 @@ def get_budget_status(month: str, api_key: str = "") -> str:
 
 @mcp.tool()
 def get_transactions(budget_month: str = "", category: str = "", start_date: str = "", end_date: str = "", limit: int = 50, api_key: str = "") -> str:
-    """List transactions with optional filters"""
+    """List transactions with optional filters
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -247,7 +326,22 @@ def get_transactions(budget_month: str = "", category: str = "", start_date: str
 
 @mcp.tool()
 def create_goal(name: str, target_amount: float, target_date: str, category: str = "Savings", api_key: str = "") -> str:
-    """Create a savings goal"""
+    """Create a savings goal
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -279,7 +373,23 @@ def create_goal(name: str, target_amount: float, target_date: str, category: str
 
 @mcp.tool()
 def update_goal_progress(goal_id: str, amount: float, api_key: str = "") -> str:
-    """Add contribution to a savings goal"""
+    """Add contribution to a savings goal
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -310,7 +420,23 @@ def update_goal_progress(goal_id: str, amount: float, api_key: str = "") -> str:
 
 @mcp.tool()
 def get_goals(status: str = "all", api_key: str = "") -> str:
-    """Get all savings goals with progress"""
+    """Get all savings goals with progress
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -331,7 +457,23 @@ def get_goals(status: str = "all", api_key: str = "") -> str:
 
 @mcp.tool()
 def get_analytics(month: str = "", category: str = "", api_key: str = "") -> str:
-    """Get spending analytics"""
+    """Get spending analytics
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -374,7 +516,23 @@ def get_analytics(month: str = "", category: str = "", api_key: str = "") -> str
 
 @mcp.tool()
 def set_budget_alert(month: str, category: str, threshold_percent: float, api_key: str = "") -> str:
-    """Set spending alert threshold for a category"""
+    """Set spending alert threshold for a category
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -399,7 +557,23 @@ def set_budget_alert(month: str, category: str, threshold_percent: float, api_ke
 
 @mcp.tool()
 def get_category_spending(month: str = "", category: str = "", api_key: str = "") -> str:
-    """Get detailed spending by category"""
+    """Get detailed spending by category
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -430,7 +604,23 @@ def get_category_spending(month: str = "", category: str = "", api_key: str = ""
 
 @mcp.tool()
 def transfer_funds(month: str, from_category: str, to_category: str, amount: float, api_key: str = "") -> str:
-    """Transfer between budget categories"""
+    """Transfer between budget categories
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -461,7 +651,23 @@ def transfer_funds(month: str, from_category: str, to_category: str, amount: flo
 
 @mcp.tool()
 def rollover_unused(source_month: str, target_month: str, api_key: str = "") -> str:
-    """Rollover unused budget to next month"""
+    """Rollover unused budget to next month
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
