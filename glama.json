@@ -1,10 +1,6 @@
 {
-  "name": "budget-planner-ai-mcp",
-  "description": "MEOK AI Labs \u2014 budget-planner-ai-mcp",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/budget-planner-ai-mcp",
-  "license": "MIT",
-  "runtime": "python",
-  "entryPoint": "mcp-wrapper.py"
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": [
+    "CSOAI-ORG"
+  ]
 }
