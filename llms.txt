@@ -1,0 +1,40 @@
+# Budget Planner Ai MCP
+
+> Comprehensive budget planning with tracking, goals, and analytics
+
+`budget-planner-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+
+## Install
+
+```bash
+pip install budget-planner-ai-mcp
+```
+
+Or run without installing:
+
+```bash
+uvx budget-planner-ai-mcp
+```
+
+## Tools
+
+- `create_budget` — Create a monthly budget with category allocations
+- `add_expense` — Record an expense transaction
+- `add_income` — Record income for a budget period
+- `get_budget_status` — Get budget status for a month
+- `get_transactions` — List transactions with optional filters
+- `create_goal` — Create a savings goal
+- `update_goal_progress` — Add contribution to a savings goal
+- `get_goals` — Get all savings goals with progress
+- `get_analytics` — Get spending analytics
+- `set_budget_alert` — Set spending alert threshold for a category
+- `get_category_spending` — Get detailed spending by category
+- `transfer_funds` — Transfer between budget categories
+- `rollover_unused` — Rollover unused budget to next month
+
+## Links
+
+- Source: https://github.com/CSOAI-ORG/budget-planner-ai-mcp
+- PyPI: https://pypi.org/project/budget-planner-ai-mcp/
+- MEOK AI Labs: https://meok.ai
+- Council of AI: https://councilof.ai
