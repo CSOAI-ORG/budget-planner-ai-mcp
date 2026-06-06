@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "budget-planner-ai-mcp"
-version = "1.0.4"
+version = "1.0.6"
 readme = "README.md"
 description = "AI-powered budget planner ai MCP server for agents. Supports create budget, add expense, add income. By MEOK AI Labs."
 license = {file = "LICENSE"}
@@ -22,7 +22,7 @@ Homepage = "https://meok.ai"
 Repository = "https://github.com/CSOAI-ORG/budget-planner-ai-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
-only-include = ["server.py"]
+only-include = ["server.py", "auth_middleware.py"]
 
 [project.scripts]
 budget_planner_ai_mcp = "server:main"

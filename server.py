@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""MEOK AI Labs — budget-planner-ai-mcp MCP Server. Comprehensive budget planning with tracking, goals, and analytics."""
+"""
+Buy Pro: https://www.csoai.org/checkout
+MEOK AI Labs — budget-planner-ai-mcp MCP Server. Comprehensive budget planning with tracking, goals, and analytics."""
 
 import json
 from datetime import datetime, timedelta, timezone
@@ -8,7 +10,6 @@ import uuid
 from collections import defaultdict
 import sys, os
 
-sys.path.insert(0, os.path.expanduser("~/clawd/meok-labs-engine/shared"))
 from auth_middleware import check_access
 from mcp.server.fastmcp import FastMCP
 
@@ -90,7 +91,7 @@ def create_budget(month: str, income: float, categories: dict, api_key: str = ""
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     total_allocated = sum(categories.values())
@@ -167,7 +168,7 @@ def add_expense(budget_month: str, category: str, amount: float, description: st
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     if not date:
@@ -263,7 +264,7 @@ def add_income(budget_month: str, source: str, amount: float, date: str = "", ap
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     if not date:
@@ -337,7 +338,7 @@ def get_budget_status(month: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     if month not in _store["budgets"]:
@@ -415,7 +416,7 @@ def get_transactions(budget_month: str = "", category: str = "", start_date: str
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     txns = _store["transactions"][-limit:]
@@ -474,7 +475,7 @@ def create_goal(name: str, target_amount: float, target_date: str, category: str
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     goal = {
@@ -542,7 +543,7 @@ def update_goal_progress(goal_id: str, amount: float, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     for goal in _store["goals"]:
@@ -608,7 +609,7 @@ def get_goals(status: str = "all", api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     goals = _store["goals"]
@@ -665,7 +666,7 @@ def get_analytics(month: str = "", category: str = "", api_key: str = "") -> str
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     txns = [t for t in _store["transactions"] if t["type"] == "expense"]
@@ -745,7 +746,7 @@ def set_budget_alert(month: str, category: str, threshold_percent: float, api_ke
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     if month not in _store["budgets"]:
@@ -806,7 +807,7 @@ def get_category_spending(month: str = "", category: str = "", api_key: str = ""
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     if not month or not category:
@@ -875,7 +876,7 @@ def transfer_funds(month: str, from_category: str, to_category: str, amount: flo
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     if month not in _store["budgets"]:
@@ -942,7 +943,7 @@ def rollover_unused(source_month: str, target_month: str, api_key: str = "") -> 
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     if source_month not in _store["budgets"] or target_month not in _store["budgets"]:
@@ -971,5 +972,8 @@ def rollover_unused(source_month: str, target_month: str, api_key: str = "") -> 
     )
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
