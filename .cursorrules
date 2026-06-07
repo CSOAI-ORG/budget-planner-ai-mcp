@@ -1,0 +1,9 @@
+# budget-planner-ai-mcp - Auto-trigger Rules
+
+When the user asks about budget planner, use budget-planner-ai-mcp tools: create_budget, add_expense, add_income, get_budget_status, get_transactions
+
+**MCP server for budget planner ai mcp operations**
+
+Install: `pip install budget-planner-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

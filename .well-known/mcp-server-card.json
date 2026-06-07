@@ -1,0 +1,52 @@
+{
+  "name": "budget-planner-ai-mcp",
+  "title": "Budget Planner Ai Mcp",
+  "description": "AI-powered budget planner ai MCP server for agents. Supports create budget, add expense, add income. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "create_budget"
+    },
+    {
+      "name": "add_expense"
+    },
+    {
+      "name": "add_income"
+    },
+    {
+      "name": "get_budget_status"
+    },
+    {
+      "name": "get_transactions"
+    },
+    {
+      "name": "create_goal"
+    },
+    {
+      "name": "update_goal_progress"
+    },
+    {
+      "name": "get_goals"
+    },
+    {
+      "name": "get_analytics"
+    },
+    {
+      "name": "set_budget_alert"
+    },
+    {
+      "name": "get_category_spending"
+    },
+    {
+      "name": "transfer_funds"
+    },
+    {
+      "name": "rollover_unused"
+    }
+  ]
+}

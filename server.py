@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-Buy Pro: https://www.csoai.org/checkout
 MEOK AI Labs — budget-planner-ai-mcp MCP Server. Comprehensive budget planning with tracking, goals, and analytics."""
 
 import json
