@@ -1,0 +1,31 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "budget-planner-ai-mcp",
+    "description": "Budget Planner Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "budget-planner-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "create_budget",
+      "add_expense",
+      "add_income",
+      "get_budget_status",
+      "get_transactions",
+      "create_goal",
+      "update_goal_progress",
+      "get_goals",
+      "get_analytics",
+      "set_budget_alert",
+      "get_category_spending",
+      "transfer_funds",
+      "rollover_unused"
+    ]
+  }
+}

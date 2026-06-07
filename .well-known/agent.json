@@ -1,0 +1,140 @@
+{
+  "name": "budget-planner-ai-mcp",
+  "description": "Budget Planner Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/budget-planner-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "create_budget",
+      "name": "Create Budget",
+      "description": "create_budget via budget-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "add_expense",
+      "name": "Add Expense",
+      "description": "add_expense via budget-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "add_income",
+      "name": "Add Income",
+      "description": "add_income via budget-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_budget_status",
+      "name": "Get Budget Status",
+      "description": "get_budget_status via budget-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_transactions",
+      "name": "Get Transactions",
+      "description": "get_transactions via budget-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "create_goal",
+      "name": "Create Goal",
+      "description": "create_goal via budget-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "update_goal_progress",
+      "name": "Update Goal Progress",
+      "description": "update_goal_progress via budget-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_goals",
+      "name": "Get Goals",
+      "description": "get_goals via budget-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_analytics",
+      "name": "Get Analytics",
+      "description": "get_analytics via budget-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "set_budget_alert",
+      "name": "Set Budget Alert",
+      "description": "set_budget_alert via budget-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_category_spending",
+      "name": "Get Category Spending",
+      "description": "get_category_spending via budget-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "transfer_funds",
+      "name": "Transfer Funds",
+      "description": "transfer_funds via budget-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "rollover_unused",
+      "name": "Rollover Unused",
+      "description": "rollover_unused via budget-planner-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
