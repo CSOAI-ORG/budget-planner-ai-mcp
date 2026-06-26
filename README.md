@@ -98,3 +98,28 @@ buyers can deploy without vendor-lock-in objections.
 
 <!-- BUY-LADDER:END -->
 
+
+
+## Configuration
+
+Add to your `claude_desktop_config.json` (Claude Desktop) or your MCP client config:
+
+```json
+{
+  "mcpServers": {
+    "budget-planner-ai-mcp": {
+      "command": "uvx",
+      "args": ["budget-planner-ai-mcp"]
+    }
+  }
+}
+```
+
+Or: `pip install budget-planner-ai-mcp` then run the `budget-planner-ai-mcp` command (stdio transport).
+
+## Examples
+
+Once configured, ask your assistant, for example:
+- "Use `create_budget` to …"
+- "Use `add_expense` to …"
+- "Use `add_income` to …"
